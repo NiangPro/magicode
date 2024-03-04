@@ -1,0 +1,475 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    overflow-x: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#global{
+    width: 100%;
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    background: #0f1428;
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    
+}
+
+.navbar img {
+        padding-left: 30px;
+        padding-top: 8px;
+        width: 200px;
+        height: auto;
+        display: block;
+}
+
+.menu{
+    width: 75%;
+    height: 99%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px ;
+    column-gap: 40px;
+    margin-top: 0px;
+    line-height: 45px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px #0f1428;
+}
+
+.menu li a:hover{
+    color:#9ea9d1;
+    transition: 2s;
+
+    
+}
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 5px;
+    --text-stroke-color: rgb(255, 255, 255);
+    --animation-color: #9ea9d1;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
+/* partie accueil  */
+#Accueil{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.123)), url("images/Stationery_Mockup_OK_3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+#Accueil .left-part{
+    width: 50%;
+    color: white;
+    text-shadow: 1px 1px 3px #0f1428;
+    text-align: center;
+    font-size: 32px;
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+#Accueil .left-part h4{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+}
+
+
+/* partie apropos  */
+#Apropos{
+    width: 100%;
+    padding: 0px 70px;
+}
+
+.title{
+    text-align: center;
+    font-family:font-family'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #0f1428;
+    font-size: 35px;
+    width:90%;
+    text-decoration: underline;
+    
+}
+.titlef{
+    font-size: 35px;
+    color: #0f1428;
+    text-align: center;
+    font-style: bold;
+    text-decoration: underline;
+}
+
+#Apropos .container{
+    width: 90%;
+    height: 350px;
+    display: flex;
+    column-gap: 30px;
+}
+
+#Apropos .container .text-part{
+    width: 50%;
+    height: 340px;
+    font-size: 28px;
+    padding: 10px;
+}
+
+#Apropos .container .text-part::first-letter{
+    color:  rgb(192, 139, 253);
+    font-size: 52px;
+    font-family:font-family'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#Apropos .container .movie-part{
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#Apropos .container .movie-part img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* partie compétence  */
+
+#competences{
+    width: 100%;
+    padding: 0px 70px;
+    margin-top: 50px;
+}
+
+#competences .container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    row-gap: 40px;
+}
+
+#competences .container .card{
+    height: 400px;
+    width: 340px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #0f1428, -2px -2px 5px #0f1428;
+}
+
+#competences .container .card .card-header{
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+#competences .container .card .card-header img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#competences .container .card .card-body{
+    width: 100%;
+    height: 38.5%;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+#competences .container .card .card-footer{
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    position: relative;
+}
+
+#competences .container .card .card-footer a{
+    border-radius: 25px;
+    padding: 10px;
+    text-decoration: none;
+    background: #0f1428;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 10px;
+    left: 35%;
+}
+
+#competences .container .card .card-footer a:hover{
+    background: #9ea9d1;
+    color:#0f1428;
+    transition: 2s;
+}
+
+/* partie Formations  */
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin-left: 20px;
+  }
+  
+  .cards .red {
+    background-image:linear-gradient(#9ea9d1, #0f14289d),url(Bsnan.jpg);
+  }
+  
+  .cards .blue {
+    background-image: linear-gradient(#9ea9d1, #0f142896),url(1.jpg);
+  }
+  
+  .cards .green {
+    background-image: linear-gradient(#9ea9d1,#0f142898),url(2.jpg);
+  }
+
+  .cards .yellow {
+    background-image: linear-gradient(#9ea9d1,#0f142883),url(3.jpg);
+  }
+  
+  .cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .cards .card p.tip {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .cards .card:hover {
+    transform: scale(1.2, 1.2);
+  }
+  
+  .cards:hover > .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+
+
+
+/* partie galerie  */
+#galerie{
+    width: 100%;
+    padding: 0px 70px;
+    margin-top: 50px;
+}
+
+#galerie .container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    justify-content: center;
+    padding-bottom: 40px;
+    row-gap: 40px;
+}
+
+#galerie .container .photo{
+    width: 250px;
+    height: 250px;
+    box-shadow: 2px 2px 5px #9ea9d1, -2px -2px 5px #0f14289d;
+    position: relative;
+}
+
+#galerie .container .photo img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -5;
+}
+
+#galerie .container .photo .name{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, .5);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    visibility: hidden;
+}
+
+#galerie .container .photo .name h4{
+    position: absolute;
+    top: 20%;
+    font-size: 20px;
+    transform: translate(10%, 10%);
+}
+
+#galerie .container .photo:hover{
+    background:linear-gradient(#0f142850,#9ea9d100) ;
+    transition: 3px;
+}
+
+#galerie .container .photo:hover .name{
+    visibility: visible;
+    transition: 6s;
+}
+
+/* partie contact  */
+#contact{
+    width: 100%;
+    padding: 0px 70px;
+    margin-top: 50px;
+    height: 250px;
+    background: #0f1428;
+    display: flex;
+    color: white;
+    font-size: 15px;
+}
+
+/* partie footer  */
+
+#footer{
+    width: 100%;
+    padding: 0px 0px;
+    height: 50px;
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    line-height: 45px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#contact .left-part img{
+    width: 500px;
+    height: auto;
+    padding-top: 75px;
+}
+
+#contact .left-part{
+    width: 50%;
+    height: 100%;
+    font-size: 22px;
+} 
+
+#contact .right-part{
+    
+    width: 50%;
+    height: 100%;
+    font-size: 22px;
+color: white;
+
+} 
+
+#contact .left-part h2{
+    width: 20%;
+    font-family: "Algerian";
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+}
+
+#contact .left-part h2 span{
+    color: rgb(0, 0, 0);
+}
+
+
+#d{
+    
+    border: none;
+    height: 500px;
+    width: 88vw;  
+    background:linear-gradient(to left,#0f1428, #929bbb);
+    padding: 80px;
+    padding-bottom: 0px;
+    margin: 40px 0px;
+}
+#d1{
+    border: none;
+    height: 80%;
+    width: 75%;
+    margin: auto;
+    /* margin-top: 45px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+#d2{
+    border: none;
+    padding: 20px;
+   color: white;
+    background: linear-gradient(to left, #0f1428, #929bbb );
+    
+}
+#d2 h1{
+    font-size: 50px;
+}
+#d3 p{
+    font-size: 20px;
+}
+#d3{
+    border: none;
+    background: white;
+}
+#d3 img{
+    height: 100%;
+    width: 100%;
+}
